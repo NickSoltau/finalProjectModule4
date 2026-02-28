@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>take 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/d976efb2d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="landing-page">
+    <nav class="navbar">
+        <img src="./assets/background_2.jpg" class="navbar__background">
+        <div class="navbar__container">
+             <figure class="logo__wrapper">
+                <i class="fa-solid fa-video nav__logo"></i>
+                <span class="nav__logo--title">Film Library</span>
+            </figure>
+            <div class="nav__links">
+                <a href="#" class="nav__link">Featured Movie</a>
+                <a href="#" class="nav__link">Timeless Classic</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <img src="./assets/background_1.jpg" class="header__background">
+        <div class="container header__container">
+            <div class="row header__row">
+                <h1 class="header__title">Find the<br> 
+                    <span class="bold__text click">PERFECT MOVIE!</span>
+                </h1>
+                <h2 class="header__sub-title">Search our catalog before you have movie night. Search for specific movies, or filter
+                    based on rating, release date, and more! There are literally thousands of movies in our database, and the perfect date night movie is waiting for you!</h2>
+                 <div class="search">
+                <input type='text' id="search__input" onkeydown="pressEnter(event)" placeholder="Movie Title">
+                <button class="search__input--btn click header__btn" onclick="getValue()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                   
+            </div>
+        </div>
+        <div class="loading__state">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+    </header>
+    <div class="search__results">
+        <h1 class="search__results--title">Here you go!</h1>
+        <div class="filter__movie--results">
+            <select id="sort_order" onchange="updateMovies()">
+                <option value="" disabled selected>Sort</option>
+                <option value="title_asc">Title A to Z</option>
+                <option value="title_desc">Title Z to A</option>
+                <option value="release__date--asc">Release Date Ascending</option>
+                <option value="release__date--desc">Release Date Descending</option>
+            </select>
+            <select id="filter_type" onchange="updateMovies()">
+                <option value="">All</option>
+                <option value="movie">Movies</option>
+                <option value="series">Series</option>
+                <option value="episode">Episodes</option>
+            </select>
+        </div>
+        <div class="search__results--list">
+            <div class="movies">
+                <div class="movie">
+                    <figure class="movie__poster">
+                        <img src="" class="movie__poster--image" alt="movie_poster">
+                    </figure>
+                    <div class="movie__info">
+                        <h3 class="movie__title"></h3>
+                        <h4 class="movie__release--date"></h4>
+                        <h4 class="movie__type"></h4>
+                        <h4 class="movie__imdb"></h4>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+    </div>
+
+</section>
+<footer>
+        <img src="./assets/background_2.jpg" class="footer__background">
+        <figure class="logo__wrapper">
+            <i class="fa-solid fa-video nav__logo"></i>
+            <span class="nav__logo--title">Film Library</span>
+        </figure>
+        <span>copyright © 2026. All rights reserved. Your mom made this</span>
+</footer>
+    
+</body>
+</html>
