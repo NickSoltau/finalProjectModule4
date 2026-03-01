@@ -18,7 +18,7 @@ setTimeout (() =>{
   if (filterType) filterType.selectedIndex = 0;
 
   async function movieRequest() {
-    const request = await fetch(`http://www.omdbapi.com/?s=${userSearch}&apikey=7cddbfc`);
+    const request = await fetch(`https://www.omdbapi.com/?s=${userSearch}&apikey=7cddbfc`);
     const requestData = await request.json();
     if (requestData.Search) {
       moviesData = requestData.Search;
